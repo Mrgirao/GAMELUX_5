@@ -1,7 +1,8 @@
 
 body {
-  font-family: Arial, sans-serif;
-  background: #0b0b0f;
+  font-family: 'Arial', sans-serif;
+  background: url('assets/bg-gamer.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #f1f1f1;
   margin: 0;
 }
@@ -22,29 +23,36 @@ body {
   border-radius: 8px;
   text-decoration: none;
 }
+.secondary {
+  background: linear-gradient(90deg,#4361ee,#3a86ff);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   gap: 1rem;
   margin: 1rem;
 }
-.plans {
+.plans, .how {
   margin: 2rem;
   text-align: center;
 }
-.plans-grid {
+.plans-grid, .how-grid {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
 }
-.plan-card {
-  background: rgba(18,18,26,0.9);
+.plan-card, .how-card, .form-card {
+  background: rgba(18,18,26,0.85);
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.6);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.plan-card:hover {
+.plan-card:hover, .how-card:hover {
   transform: scale(1.03);
   box-shadow: 0 0 15px #6a0dad;
 }
@@ -53,11 +61,19 @@ body {
   font-weight: bold;
   color: #a64dff;
 }
-.plan-card button {
-  background: linear-gradient(90deg,#4361ee,#3a86ff);
-  color: #fff;
+.form-card input {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
   border: none;
   border-radius: 8px;
-  padding: 0.5rem 1rem;
+}
+.form-card button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
 }
